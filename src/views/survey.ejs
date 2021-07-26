@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        let facebookAppId = "<%= facebookAppId %>"
+        console.log(facebookAppId);
+    </script>
+    <script src="js/survey.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+    .title {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    .note1 {
+        font-size: 12px;
+        margin-bottom: 15px;
+        font-style: italic;
+    }
+
+    .subscribe {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .btn-send {
+        width: 85px;
+        margin-bottom: 15px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 ">
+                <div class="title text-center"> <b> Nhập mã sách ANHTTT55 năm 3 kì 1</b></div>
+                <div class="note1">
+                    <span style="color: red"><b>Note :</b></span>
+                    Bạn cần điền chính xác <b>'Tên đầy đủ'</b> và <b>'mã sách của bạn'!</b>
+                </div>
+            </div>
+            <div class="col-12 form-group">
+                <input class="form-control" hidden id="psid"/>
+            </div>
+            <div class="col-12 form-group">
+                <label>Hãy nhập tên đầy đủ của bạn</label>
+                <input class="form-control" type='text' id='name' placeholder="Ví dụ : Chu Tuấn Kiệt" />
+            </div>
+            <div class="col-12">
+                <h4>Hãy nhập mã sách vào form bên dưới</h4>
+            </div>
+            <div class="col-12 form-group">
+                <label>Sách toán chuyên đề</label>
+                <input class="form-control" type='number' id="sach1" />
+            </div>
+            <div class="col-12 form-group">
+                <label>Sách toán chuyên đề</label>
+                <input class="form-control" type='number' id="sach2" />
+            </div>
+            <div class="col-12 form-group">
+                <label>Sách bài tập thực hành vật lý</label>
+                <input class="form-control" type='number' id="sach3" />
+            </div>
+            <div class="col-12 form-group">
+                <label>Bạn có cần lưu ý gì không ?</label>
+                <textarea id="note" rows="3" placeholder="Tell me somthing..." class="form-control"></textarea>
+            </div>
+            <!-- <div class="col-12">
+                <div class="note1">
+                    <span style="color: red"><b>Note 2:</b></span> Please subscribe to my Youtube channel to have more
+                    useful
+                    videos, and get notified when new videos
+                    land.
+                </div>
+            </div> -->
+            <!-- <div class="col-12 subscribe">
+                <script src="https://apis.google.com/js/platform.js"></script>
+                <div class="g-ytsubscribe" data-channelid="UCHqJxLo7mKam9GKqqwr2wfA" data-layout="full"
+                    data-count="default">
+                </div>
+            </div> -->
+
+            <div class="col-12 text-center">
+                <button class="btn btn-primary btn-send" id="submitBtn">Send</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

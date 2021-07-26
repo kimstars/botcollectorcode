@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CTK</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <h3>Hi there. This is a sample page, a quick start project for building a Messenger Chatbot.</h3>
+    <h4 title="Click to chat with the bot"><a target="_blank" href="https://m.me/ctkbot"> A Collection Subject code</a></h4>
+    <div>
+        <p>Setup a get started button and a persistent menu</p>
+        <form action="/setup" method="POST">
+            <button type="submit"> Set up </button>
+        </form>
+    </div>
+    <div>
+        <p>Testing write data to google sheets online</p>
+        <form action="/write-data" method="POST">
+            <button>Write data</button>
+        </form>
+    </div>
+
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "228461991026153");
+      chatbox.setAttribute("attribution", "setup_tool");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+</body>
+
+</html>
